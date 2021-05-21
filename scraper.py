@@ -30,13 +30,13 @@ login_number.send_keys("9994987315")
 wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="lgn_smtn"]'))).click() 
 #going inside otp page
 otp = input("-------------------Enter your 6 digit OTP--------------------- ")
+time.sleep(3)
 for i in range(6):
     #targetting each otp input dash
     login_otp = browser.find_element_by_xpath(f'//*[@id="pin_{i}"]')
     login_otp.send_keys(otp[i]) 
 #click otp submit button
 wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="otp_submit"]'))).click() 
-
-#going to home after login
-wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/header/div[1]/div/div/div[1]/aside/a'))).click() 
-
+#redirecting to the main page after login
+time.sleep(20)
+browser.get('https://www.justdial.com/')
