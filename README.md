@@ -4,4 +4,4 @@
 
 
 #### To create a windows executable software
--      pyinstaller -F --onedir --console --icon "C:/Users/gurup/Desktop/just-dial-automate/scrape.ico" --add-data "C:/Users/gurup/Desktop/just-dial-automate               /data.csv;." --hidden-import "bs4" "C:/Users/gurup/Desktop/just-dial-automate/just-dial.py"
+-      pyinstaller -F --onedir --console --icon {path for the icon} --add-data {add additional files you have used} --hidden-import {"package_name"}                        {Python_file_name}.py
